@@ -63,17 +63,9 @@ nav .logo {
 
   cursor: pointer;
 
-  background-image: url("./img/header/logo-white.png");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-}
-
-header.dark .logo {
-  background-image: url("./img/header/logo-black.png");
-}
-
-header:hover .logo {
-  background-image: url("./img/header/logo-black.png");
 }
 
 .gnb {

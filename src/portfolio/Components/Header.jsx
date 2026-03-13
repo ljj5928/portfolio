@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 const Header = ({ showHeader }) => {
   const [isHeaderHide, setIsHeaderHide] = useState(false);
   const [isDarkSection, setIsDarkSection] = useState(false);
+  const [isHover, setIsHover] = useState(false);
   const prevScrollY = useRef(0);
+
+  const isBlackLogo = isDarkSection || isHover;
+
+  const logoSrc = isBlackLogo
+    ? `${import.meta.env.BASE_URL}img/header/logo-black.png`
+    : `${import.meta.env.BASE_URL}img/header/logo-white.png`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,16 +48,25 @@ const Header = ({ showHeader }) => {
   return (
     <header
       className={`${showHeader ? "show" : ""} ${isHeaderHide ? "hide" : ""} ${isDarkSection ? "dark" : ""}`}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
     >
       <nav>
-        <Link to={"/"}><div className="logo"></div></Link>
+        <Link to="/">
+          <div
+            className="logo"
+            style={{
+              backgroundImage: `url(${logoSrc})`,
+            }}
+          />
+        </Link>
 
         <ul className="gnb">
           <li>
-            <Link to={"/about"}>About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to={"/projects"}>Projects</Link>
+            <Link to="/projects">Projects</Link>
           </li>
         </ul>
       </nav>
