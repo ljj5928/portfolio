@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<GitHub-사용자명>.github.io/<저장소-이름>",
+  "homepage": "https://ljj5928.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
