@@ -177,7 +177,8 @@
   overflow: hidden;
   border-radius: 20px;
 
-  background: url("./img/home/profile-image2.jpg") top center / cover no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 /* utility */

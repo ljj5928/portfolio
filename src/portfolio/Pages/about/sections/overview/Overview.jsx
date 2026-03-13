@@ -13,7 +13,7 @@ const Overview = () => {
           setIsShow(true);
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0.35 },
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -22,10 +22,7 @@ const Overview = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`overview ${isShow ? "show" : ""}`}
-    >
+    <section ref={sectionRef} className={`overview ${isShow ? "show" : ""}`}>
       <div className="overview-bg-words">OVERVIEW</div>
 
       <div className="overview-container">
@@ -56,11 +53,16 @@ const Overview = () => {
 
         <div className="overview-visual">
           <div className="overview-photo-frame">
-            <div className="overview-photo"></div>
+            <div
+              className="overview-photo"
+              style={{
+                backgroundImage: `url(${import.meta.env.BASE_URL}img/home/profile-image2.jpg)`,
+              }}
+            ></div>
           </div>
         </div>
       </div>
-      <ScrollIndicator/>
+      <ScrollIndicator />
     </section>
   );
 };

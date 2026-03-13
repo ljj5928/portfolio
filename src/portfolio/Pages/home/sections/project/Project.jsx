@@ -45,7 +45,7 @@ const Project = () => {
 
   useEffect(() => {
     const targets = sectionRef.current?.querySelectorAll(
-      ".reveal-line, .reveal-button"
+      ".reveal-line, .reveal-button",
     );
     if (!targets?.length) return;
 
@@ -61,7 +61,7 @@ const Project = () => {
       {
         threshold: 0.75,
         rootMargin: "0px 0px -15% 0px",
-      }
+      },
     );
 
     targets.forEach((el) => observer.observe(el));
@@ -79,7 +79,7 @@ const Project = () => {
       },
       {
         threshold: 0.45,
-      }
+      },
     );
 
     observer.observe(section);
@@ -107,21 +107,33 @@ const Project = () => {
                 사용자 경험을 고려한 구조와
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.08s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.08s" }}
+              >
                 정확한 마크업을 바탕으로
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.16s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.16s" }}
+              >
                 프로젝트를 제작했습니다.
               </span>
             </h3>
 
             <p className="project-desc">
-              <span className="reveal-line" style={{ transitionDelay: "0.24s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.24s" }}
+              >
                 HTML, CSS, JavaScript를 기반으로
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.32s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.32s" }}
+              >
                 클론코딩과 React 프로젝트를 제작했습니다.
               </span>
             </p>
@@ -152,9 +164,24 @@ const Project = () => {
             </div>
 
             <div className="card-stack" aria-hidden="true">
-              <div className="stack-card back" />
-              <div className="stack-card mid" />
-              <div className="stack-card top" />
+              <div
+                className="stack-card back"
+                style={{
+                  backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card3.png)`,
+                }}
+              />
+              <div
+                className="stack-card mid"
+                style={{
+                  backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card2.png)`,
+                }}
+              />
+              <div
+                className="stack-card top"
+                style={{
+                  backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card1.png)`,
+                }}
+              />
             </div>
           </div>
         </Link>

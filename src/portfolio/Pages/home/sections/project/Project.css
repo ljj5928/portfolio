@@ -141,7 +141,6 @@
   cursor: none;
 }
 
-
 .card-stack {
   position: relative;
 
@@ -163,17 +162,11 @@
   will-change: transform, opacity;
 }
 
-.stack-card.top {
-  background-image: url("./img/home/home-project-card1.png");
-}
-
 .stack-card.mid {
-  background-image: url("./img/home/home-project-card2.png");
   background-position: center;
 }
 
 .stack-card.back {
-  background-image: url("./img/home/home-project-card3.png");
   background-position: center;
 }
 

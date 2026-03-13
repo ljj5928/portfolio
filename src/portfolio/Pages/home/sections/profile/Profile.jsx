@@ -129,7 +129,7 @@ const Profile = () => {
               onMouseMove={move}
             >
               <img
-                src="/img/home/profile-image1.jpg"
+                src="./img/home/profile-image1.jpg"
                 alt="프로필사진1"
               />
             </div>
@@ -143,7 +143,7 @@ const Profile = () => {
               onMouseMove={move}
             >
               <img
-                src="/img/home/profile-image2.jpg"
+                src="./img/home/profile-image2.jpg"
                 alt="프로필사진2"
               />
             </div>
