@@ -83,7 +83,12 @@ const App = () => {
         ))}
       </div>
 
-      <main>
+      <main
+        className="app-main"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-bg.jpg)`,
+        }}
+      >
         <Routes>
           <Route
             path="/"
@@ -97,4 +102,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; 
