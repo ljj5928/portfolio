@@ -15,7 +15,7 @@ const projects = [
       "반응형 레이아웃 구현",
     ],
     image: "./img/home/home-project-card1.png",
-    live: "#",
+    live: "https://ljj5928.github.io/CloneDongwon/",
     github: "https://github.com/ljj5928/CloneDongwon",
   },
   {
