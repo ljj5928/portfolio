@@ -5,7 +5,12 @@ const Hero = ({ introEnd }) => {
   const heroRef = useRef(null);
   const timersRef = useRef([]);
   const finishedRef = useRef(false);
+  const introEndRef = useRef(introEnd);
   const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    introEndRef.current = introEnd;
+  }, [introEnd]);
 
   const clearAllTimers = () => {
     timersRef.current.forEach(clearTimeout);
@@ -17,9 +22,9 @@ const Hero = ({ introEnd }) => {
     finishedRef.current = true;
 
     clearAllTimers();
-    introEnd?.();
+    introEndRef.current?.();
     setShowScroll(true);
-  }, [introEnd]);
+  }, []);
 
   const finishIntro = useCallback(() => {
     const hero = heroRef.current;
@@ -54,12 +59,8 @@ const Hero = ({ introEnd }) => {
       }, 4300),
     ];
 
-    window.addEventListener("wheel", finishIntro, {
-      passive: true,
-    });
-    window.addEventListener("touchstart", finishIntro, {
-      passive: true,
-    });
+    window.addEventListener("wheel", finishIntro, { passive: true });
+    window.addEventListener("touchstart", finishIntro, { passive: true });
 
     return () => {
       clearAllTimers();

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Pages/home/Home";
@@ -16,6 +16,10 @@ const App = () => {
 
   const lastParticleTime = useRef(0);
   const removeTimers = useRef([]);
+
+  const handleIntroEnd = useCallback(() => {
+    setShowHeader(true);
+  }, []);
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -90,10 +94,7 @@ const App = () => {
         }}
       >
         <Routes>
-          <Route
-            path="/"
-            element={<Home introEnd={() => setShowHeader(true)} />}
-          />
+          <Route path="/" element={<Home introEnd={handleIntroEnd} />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
@@ -102,4 +103,4 @@ const App = () => {
   );
 };
 
-export default App; 
+export default App;
