@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 const Header = ({ showHeader }) => {
   const [isHeaderHide, setIsHeaderHide] = useState(false);
-  const [isDarkSection, setIsDarkSection] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const prevScrollY = useRef(0);
 
-  const isBlackLogo = isDarkSection || isHover;
+  const isBlackLogo = isHover;
 
   const logoSrc = isBlackLogo
     ? `${import.meta.env.BASE_URL}img/header/logo-black.png`
@@ -25,18 +24,6 @@ const Header = ({ showHeader }) => {
       }
 
       prevScrollY.current = currentScrollY;
-
-      const profileSection = document.querySelector("#profile");
-      if (!profileSection) return;
-
-      const headerHeight = 100;
-      const profileTop = profileSection.getBoundingClientRect().top;
-      const profileBottom = profileSection.getBoundingClientRect().bottom;
-
-      const isProfileUnderHeader =
-        profileTop <= headerHeight && profileBottom > headerHeight;
-
-      setIsDarkSection(isProfileUnderHeader);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,7 +34,7 @@ const Header = ({ showHeader }) => {
 
   return (
     <header
-      className={`${showHeader ? "show" : ""} ${isHeaderHide ? "hide" : ""} ${isDarkSection ? "dark" : ""}`}
+      className={`${showHeader ? "show" : ""} ${isHeaderHide ? "hide" : ""} `}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

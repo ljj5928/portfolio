@@ -53,9 +53,7 @@ header:hover nav * {
   color: black;
 }
 
-header.dark nav * {
-  color: black;
-}
+
 
 nav .logo {
   width: 70px;
