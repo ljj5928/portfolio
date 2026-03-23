@@ -7,9 +7,16 @@ const Hero = ({ introEnd }) => {
   const finishedRef = useRef(false);
   const [showScroll, setShowScroll] = useState(false);
 
+  const clearAllTimers = () => {
+    timersRef.current.forEach(clearTimeout);
+    timersRef.current = [];
+  };
+
   const completeIntro = useCallback(() => {
     if (finishedRef.current) return;
     finishedRef.current = true;
+
+    clearAllTimers();
     introEnd?.();
     setShowScroll(true);
   }, [introEnd]);
@@ -18,15 +25,24 @@ const Hero = ({ introEnd }) => {
     const hero = heroRef.current;
     if (!hero || finishedRef.current) return;
 
-    timersRef.current.forEach(clearTimeout);
+    clearAllTimers();
 
     hero.classList.add("open", "expand", "derivation", "align");
-    completeIntro();
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        completeIntro();
+      });
+    });
   }, [completeIntro]);
 
   useEffect(() => {
     const hero = heroRef.current;
     if (!hero) return;
+
+    finishedRef.current = false;
+    hero.classList.remove("open", "expand", "derivation", "align");
+    setShowScroll(false);
 
     timersRef.current = [
       setTimeout(() => hero.classList.add("open"), 300),
@@ -39,16 +55,14 @@ const Hero = ({ introEnd }) => {
     ];
 
     window.addEventListener("wheel", finishIntro, {
-      once: true,
       passive: true,
     });
     window.addEventListener("touchstart", finishIntro, {
-      once: true,
       passive: true,
     });
 
     return () => {
-      timersRef.current.forEach(clearTimeout);
+      clearAllTimers();
       window.removeEventListener("wheel", finishIntro);
       window.removeEventListener("touchstart", finishIntro);
     };
