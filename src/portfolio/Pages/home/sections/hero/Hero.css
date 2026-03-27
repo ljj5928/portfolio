@@ -402,19 +402,19 @@
   }
 
   .hero.derivation .detail {
-    transform: translate(-40%, -80px);
+    transform: translate(-50%, -120px);
   }
 
   .hero.derivation .grow {
-    transform: translate(-40%, -20px);
+    transform: translate(-50%, -40px);
   }
 
   .hero.derivation .sem {
-    transform: translate(-40%, 40px);
+    transform: translate(-50%, 40px);
   }
 
   .hero.derivation .inter {
-    transform: translate(-40%, 100px);
+    transform: translate(-50%, 120px);
   }
 
   .hero.align .hero-keyword {

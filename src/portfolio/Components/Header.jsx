@@ -32,11 +32,21 @@ const Header = ({ showHeader }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMouseEnter = () => {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  setIsHover(true);
+};
+
+const handleMouseLeave = () => {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  setIsHover(false);
+};
+
   return (
     <header
       className={`${showHeader ? "show" : ""} ${isHeaderHide ? "hide" : ""} `}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <nav>
         <Link to="/">
