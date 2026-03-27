@@ -89,9 +89,6 @@ const App = () => {
 
       <main
         className="app-main"
-        style={{
-          backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-bg.jpg)`,
-        }}
       >
         <Routes>
           <Route path="/" element={<Home introEnd={handleIntroEnd} />} />
