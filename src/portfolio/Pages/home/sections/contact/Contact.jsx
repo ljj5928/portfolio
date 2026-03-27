@@ -43,10 +43,10 @@ const Contact = () => {
         </a>
 
         <div className="contact-links">
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/ljj5928" target="_blank" rel="noreferrer">
             깃허브
           </a>
-          <a href="/" target="_blank" rel="noreferrer">
+          <a href="./resume.pdf" target="_blank" rel="noreferrer">
             이력서
           </a>
         </div>
