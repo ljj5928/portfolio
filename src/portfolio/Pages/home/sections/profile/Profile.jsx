@@ -58,7 +58,7 @@ const Profile = () => {
       {
         threshold: 0.35,
         rootMargin: "0px 0px -8% 0px",
-      }
+      },
     );
 
     targets.forEach((el) => observer.observe(el));
@@ -84,35 +84,41 @@ const Profile = () => {
                 기본에 충실한 마크업과
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.08s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.08s" }}
+              >
                 깔끔한 구조를 중요하게 생각하는
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.16s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.16s" }}
+              >
                 Web Publisher입니다.
               </span>
             </h3>
 
             <p className="profile-desc">
-              <span className="reveal-line" style={{ transitionDelay: "0.24s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.24s" }}
+              >
                 작은 디테일까지 고민하며
               </span>
               <br />
-              <span className="reveal-line" style={{ transitionDelay: "0.32s" }}>
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.32s" }}
+              >
                 지속적으로 성장하고 있습니다.
               </span>
             </p>
           </div>
 
-          <Link to="/about">
-            <button
-              className="profile-button reveal-line"
-              type="button"
-              style={{ transitionDelay: "0.4s" }}
-            >
-              <span className="profile-button-text">About me</span>
-              <span className="profile-button-arrow">→</span>
-            </button>
+          <Link to="/about" className="profile-button reveal-line">
+            <span className="profile-button-text">About me</span>
+            <span className="profile-button-arrow">→</span>
           </Link>
         </div>
 
@@ -128,10 +134,7 @@ const Profile = () => {
               onMouseLeave={hide}
               onMouseMove={move}
             >
-              <img
-                src="./img/home/profile-image1.jpg"
-                alt="프로필사진1"
-              />
+              <img src="./img/home/profile-image1.jpg" alt="프로필사진1" />
             </div>
           </Link>
 
@@ -142,10 +145,7 @@ const Profile = () => {
               onMouseLeave={hide}
               onMouseMove={move}
             >
-              <img
-                src="./img/home/profile-image2.jpg"
-                alt="프로필사진2"
-              />
+              <img src="./img/home/profile-image2.jpg" alt="프로필사진2" />
             </div>
           </Link>
         </div>

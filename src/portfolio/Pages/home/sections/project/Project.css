@@ -245,24 +245,6 @@
   transform: translateY(0) rotate(10deg) scale(1);
 }
 
-/* button interaction */
-
-.project-button:hover::before {
-  transform: translateX(0);
-}
-
-.project-button:hover .project-button-text {
-  color: #fff;
-  transition: color 0.2s ease;
-}
-
-.project-button:hover .project-button-arrow {
-  background: #fff;
-  color: #000;
-
-  transform: translateX(4px);
-}
-
 /* reveal */
 
 .reveal-line {
@@ -303,6 +285,25 @@
   filter: blur(0);
 
   transform: translateY(0);
+}
+
+/* :hover */
+@media (hover: hover) and (pointer: fine) {
+  .project-button:hover::before {
+    transform: translateX(0);
+  }
+
+  .project-button:hover .project-button-text {
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+
+  .project-button:hover .project-button-arrow {
+    background: #fff;
+    color: #000;
+
+    transform: translateX(4px);
+  }
 }
 
 /* responsive */

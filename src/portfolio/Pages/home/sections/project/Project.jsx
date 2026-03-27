@@ -139,15 +139,9 @@ const Project = () => {
             </p>
           </div>
 
-          <Link to="/projects">
-            <button
-              className="project-button reveal-button"
-              type="button"
-              style={{ transitionDelay: "0.4s" }}
-            >
+          <Link to="/projects" className="project-button reveal-button">
               <span className="project-button-text">My Work</span>
               <span className="project-button-arrow">→</span>
-            </button>
           </Link>
         </div>
 
