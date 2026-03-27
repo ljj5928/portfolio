@@ -303,27 +303,36 @@
 
 /* responsive */
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
+  .project-card,
+  .project-card.reverse {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
   .project-card,
   .project-card.reverse {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 15px;
   }
 
   .project-card.reverse .project-card-media,
   .project-card.reverse .project-card-content {
     order: initial;
   }
-}
 
-@media (max-width: 768px) {
+  .project-card-block {
+    padding-top: 15px;
+  }
+
   .project-card-image-box,
   .project-card-content {
     border-radius: 22px;
   }
 
   .project-card-content {
-    padding: 26px 22px;
+    padding: 20px 22px;
   }
 
   .project-card-title {
@@ -331,13 +340,17 @@
   }
 
   .project-card-desc {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 15px;
   }
 
   .project-card-feature-list li {
     font-size: 13px;
   }
 
+  .project-card-links {
+    margin-top: 15px;
+  }
   .project-card-links a {
     flex: 1 1 calc(50% - 6px);
   }
