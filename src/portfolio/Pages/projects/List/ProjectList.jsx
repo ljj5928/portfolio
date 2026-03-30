@@ -8,7 +8,7 @@ const projects = [
     title: "동원 클론코딩",
     subtitle: "React 기반 기업 홈페이지 클론 프로젝트",
     desc: "실제 사이트의 구조를 분석하고 컴포넌트 단위로 분리하여 반응형 UI와 정보 구조를 구현한 프로젝트입니다.",
-    stack: ["React","GSAP","CSS"],
+    stack: ["React","GSAP","Three.js"],
     features: [
       "시맨틱 마크업 기반 구조 설계",
       "컴포넌트 단위 UI 분리",
