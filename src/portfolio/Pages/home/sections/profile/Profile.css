@@ -311,7 +311,8 @@
   }
 
   .profile-photo img {
-    height: fit-content;
+    width: 100%;
+    height: 100%;
   }
 
   .profile-photo-sub {
@@ -341,7 +342,6 @@
   }
 
   .profile-content {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -366,7 +366,7 @@
     top: 18%;
 
     min-width: 100%;
-    
+
     z-index: -1;
 
     display: flex;

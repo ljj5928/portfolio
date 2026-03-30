@@ -134,7 +134,7 @@ const Profile = () => {
               onMouseLeave={hide}
               onMouseMove={move}
             >
-              <img src="./img/home/profile-image1.jpg" alt="프로필사진1" />
+              <img src="./img/home/profile-image1.png" alt="프로필사진1" />
             </div>
           </Link>
 
