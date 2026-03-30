@@ -306,6 +306,24 @@
   }
 }
 
+/* :active */
+  .project-button:active::before {
+    transform: translateX(0);
+  }
+
+  .project-button:active .project-button-text {
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+
+  .project-button:active .project-button-arrow {
+    background: #fff;
+    color: #000;
+
+    transform: translateX(4px);
+  }
+
+
 /* responsive */
 
 @media screen and (max-width: 1200px) {

@@ -230,17 +230,6 @@
   object-position: top;
 }
 
-.profile-photo:hover {
-  transform: translateY(-10px);
-}
-
-.profile-photo:hover::after {
-  opacity: 1;
-}
-
-.profile-photo:hover img {
-  transform: scale(1.06);
-}
 
 /* reveal */
 
@@ -269,6 +258,22 @@
   display: inline-flex;
 }
 
+
+
+/* :hover */
+@media (hover: hover) and (pointer: fine) {
+.profile-photo:hover {
+  transform: translateY(-10px);
+}
+
+.profile-photo:hover::after {
+  opacity: 1;
+}
+
+.profile-photo:hover img {
+  transform: scale(1.06);
+}
+
 .profile-button:hover::before {
   transform: translateX(0);
 }
@@ -280,6 +285,26 @@
 }
 
 .profile-button:hover .profile-button-arrow {
+  background: #fff;
+
+  color: #000;
+
+  transform: translateX(4px);
+}
+}
+
+/* :active */
+.profile-button:active::before {
+  transform: translateX(0);
+}
+
+.profile-button:active .profile-button-text {
+  color: #fff;
+
+  transition: color 0.2s ease;
+}
+
+.profile-button:active .profile-button-arrow {
   background: #fff;
 
   color: #000;
