@@ -140,8 +140,8 @@ const Project = () => {
           </div>
 
           <Link to="/projects" className="project-button reveal-button">
-              <span className="project-button-text">My Work</span>
-              <span className="project-button-arrow">→</span>
+            <span className="project-button-text">My Work</span>
+            <span className="project-button-arrow">→</span>
           </Link>
         </div>
 
@@ -163,19 +163,37 @@ const Project = () => {
                 style={{
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card3.png)`,
                 }}
-              />
+              >
+                <ul className="stack-list back-stack">
+                  <li>React</li>
+                  <li>Redux</li>
+                  <li>API</li>
+                </ul>
+              </div>
               <div
                 className="stack-card mid"
                 style={{
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card2.png)`,
                 }}
-              />
+              >
+                  <ul className="stack-list mid-stack">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
               <div
                 className="stack-card top"
                 style={{
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card1.png)`,
                 }}
-              />
+              >
+                  <ul className="stack-list top-stack">
+                  <li>React</li>
+                  <li>GSAP</li>
+                  <li>Three.js</li>
+                </ul>
+              </div>
             </div>
           </div>
         </Link>

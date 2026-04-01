@@ -19,7 +19,7 @@
   z-index: 1;
 
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 400px 1fr;
   align-items: start;
   gap: 20px;
 
@@ -144,7 +144,7 @@
 .card-stack {
   position: relative;
 
-  width: 420px;
+  width: 100%;
   height: 420px;
 }
 
@@ -154,6 +154,9 @@
   right: 0;
   bottom: 0;
   left: 0;
+
+  width: 420px;
+  height: 420px;
 
   border-radius: 28px;
   background-size: cover;
@@ -177,15 +180,15 @@
 }
 
 .project-gallery.before-enter .stack-card.back {
-  transform: translateY(300px) rotate(-15deg) scale(0.96);
+  transform: translateY(300px) scale(0.96);
 }
 
 .project-gallery.before-enter .stack-card.mid {
-  transform: translateY(300px) rotate(0deg) scale(0.96);
+  transform: translateY(300px)  scale(0.96);
 }
 
 .project-gallery.before-enter .stack-card.top {
-  transform: translateY(300px) rotate(15deg) scale(0.96);
+  transform: translateY(300px)  scale(0.96);
 }
 
 .project-gallery.visible .stack-card {
@@ -193,7 +196,9 @@
 }
 
 .project-gallery.visible .stack-card.back {
-  transform: translateY(0) rotate(-15deg) scale(1);
+  left: 400px;
+  top: -100px;
+  transform: translateY(0)  scale(1);
   transition:
     transform 1.5s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.7s ease;
@@ -201,7 +206,7 @@
 }
 
 .project-gallery.visible .stack-card.mid {
-  transform: translateY(0) rotate(0deg) scale(1);
+  transform: translateY(0)  scale(1);
   transition:
     transform 1.55s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.75s ease;
@@ -209,7 +214,9 @@
 }
 
 .project-gallery.visible .stack-card.top {
-  transform: translateY(0) rotate(15deg) scale(1);
+  left: 200px;
+  top: 100px;
+  transform: translateY(0)  scale(1);
   transition:
     transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.8s ease;
@@ -222,27 +229,30 @@
 }
 
 .project-gallery.leaving-up .stack-card.back {
-  transform: translateY(-720px) rotate(-20deg) scale(0.96);
+  left: 400px;
+  transform: translateY(-720px)  scale(0.96);
 }
 
 .project-gallery.leaving-up .stack-card.mid {
-  transform: translateY(-720px) rotate(-4deg) scale(0.96);
+
+  transform: translateY(-720px)  scale(0.96);
 }
 
 .project-gallery.leaving-up .stack-card.top {
-  transform: translateY(-720px) rotate(20deg) scale(0.96);
+  left: 200px;
+  transform: translateY(-720px) scale(0.96);
 }
 
 .project-gallery.visible:hover .stack-card.top {
-  transform: translateY(0) rotate(-2deg) scale(1);
+  transform: translateY(-3px)  scale(1);
 }
 
 .project-gallery.visible:hover .stack-card.mid {
-  transform: translateY(0) rotate(-15deg) scale(1);
+  transform: translateY(-5px)  scale(1);
 }
 
 .project-gallery.visible:hover .stack-card.back {
-  transform: translateY(0) rotate(10deg) scale(1);
+  transform: translateY(-5px)  scale(1);
 }
 
 /* reveal */
@@ -336,11 +346,7 @@
     margin-left: 50px;
   }
 
-  .card-stack {
-    width: 100%;
 
-    transform: translateX(100px);
-  }
 
   .stack-card {
     width: 70%;
@@ -349,13 +355,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .card-stack {
-    min-width: 400px;
 
-    transform: translateX(20px);
-  }
-}
 
 @media screen and (max-width: 768px) {
   .project-container {
@@ -400,14 +400,6 @@
     min-height: 400px;
   }
 
-  .card-stack {
-    width: 100%;
-    min-width: 0;
-
-    opacity: 0.7;
-
-    transform: translateX(0);
-  }
 
   .stack-card {
     top: auto;
