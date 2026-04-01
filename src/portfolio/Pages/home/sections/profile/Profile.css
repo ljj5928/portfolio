@@ -23,8 +23,9 @@
   z-index: 1;
 
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 400px 1fr;
   align-items: start;
+  justify-content: space-between;
   gap: 20px;
 
   max-width: 1200px;
@@ -133,10 +134,11 @@
 .profile-gallery {
   position: relative;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+
   align-items: start;
-  gap: 40px;
+  justify-content: flex-end;
+  gap: 50px;
 }
 
 .cursor-follower {
@@ -211,25 +213,69 @@
 
   background-color: transparent;
   object-fit: cover;
+  object-position: top;
 
   transform: scale(1.02);
   transition: transform 0.6s ease;
 }
 
-.profile-photo-main {
-  background-color: #ffffff;
+/* skills */
+
+.profile-skills {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  padding: 36px;
+
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
-.profile-photo-sub {
-  background-color: rgb(175, 175, 175);
+.skills-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-.profile-photo-sub img {
-  background-color: transparent;
-  background-position: top;
-  object-position: top;
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.skills-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skills-list li:last-child {
+  border-bottom: none;
+}
+
+.skills-list strong {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.skills-list span {
+  font-size: 14px;
+  color: #bdbdbd;
+}
 
 /* reveal */
 
@@ -258,39 +304,37 @@
   display: inline-flex;
 }
 
-
-
 /* :hover */
 @media (hover: hover) and (pointer: fine) {
-.profile-photo:hover {
-  transform: translateY(-10px);
-}
+  .profile-photo:hover {
+    transform: translateY(-10px);
+  }
 
-.profile-photo:hover::after {
-  opacity: 1;
-}
+  .profile-photo:hover::after {
+    opacity: 1;
+  }
 
-.profile-photo:hover img {
-  transform: scale(1.06);
-}
+  .profile-photo:hover img {
+    transform: scale(1.06);
+  }
 
-.profile-button:hover::before {
-  transform: translateX(0);
-}
+  .profile-button:hover::before {
+    transform: translateX(0);
+  }
 
-.profile-button:hover .profile-button-text {
-  color: #fff;
+  .profile-button:hover .profile-button-text {
+    color: #fff;
 
-  transition: color 0.2s ease;
-}
+    transition: color 0.2s ease;
+  }
 
-.profile-button:hover .profile-button-arrow {
-  background: #fff;
+  .profile-button:hover .profile-button-arrow {
+    background: #fff;
 
-  color: #000;
+    color: #000;
 
-  transform: translateX(4px);
-}
+    transform: translateX(4px);
+  }
 }
 
 /* :active */
@@ -316,45 +360,30 @@
 
 @media screen and (max-width: 1200px) {
   .profile-container {
-    grid-template-columns: 320px 1fr;
-
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
   }
 
   .profile-gallery {
-    display: block;
+    flex-direction: column;
+    gap: 0px;
 
-    min-width: 440px;
+    position: relative;
+
+    justify-content: center;
+  }
+  .profile-photo {
+    height: 300px;
   }
 
-  .profile-photo-main {
-    width: 80%;
-    min-width: 350px;
-
-    aspect-ratio: 1 / 1;
+  .profile-skills {
+    position: relative;
+    padding: 20px 0px;
   }
-
-  .profile-photo img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .profile-photo-sub {
-    position: absolute;
-    right: 0;
-    bottom: -20%;
-    z-index: -1;
-
-    width: 40%;
-
-    aspect-ratio: 1 / 1;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .profile-photo-sub {
-    right: 0;
+  .skills-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 500px;
   }
 }
 
@@ -398,12 +427,21 @@
     align-items: center;
     justify-content: center;
   }
-
-  .profile-photo-main {
+  .profile-photo {
     width: 80px;
+    height: 80px;
     min-width: 0;
 
     border-radius: 999px;
+    background-color: white;
+  }
+
+  .profile-photo img {
+    width: 300%;
+    height: 300%;
+    object-fit: cover;
+
+    transform: translateX(-6px);
   }
 
   .profile-gallery a:last-of-type {

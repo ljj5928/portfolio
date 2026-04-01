@@ -134,18 +134,35 @@ const Profile = () => {
               onMouseLeave={hide}
               onMouseMove={move}
             >
-              <img src="./img/home/profile-image1.png" alt="프로필사진1" />
+              <img src="./img/home/profile-image2.jpg" alt="프로필사진1" />
             </div>
           </Link>
 
           <Link to="/about">
-            <div
-              className="profile-photo profile-photo-sub"
-              onMouseEnter={show}
-              onMouseLeave={hide}
-              onMouseMove={move}
-            >
-              <img src="./img/home/profile-image2.jpg" alt="프로필사진2" />
+            <div className="profile-skills">
+              <h4 className="skills-title">Skills</h4>
+
+              <ul className="skills-list">
+                <li>
+                  <strong>React / Vite</strong>
+                  <span>컴포넌트 기반 UI 제작</span>
+                </li>
+
+                <li>
+                  <strong>HTML / CSS / Responsive</strong>
+                  <span>구조적인 마크업과 반응형 구현</span>
+                </li>
+
+                <li>
+                  <strong>Sass / Git / Figma</strong>
+                  <span>스타일 관리와 협업 도구 활용</span>
+                </li>
+
+                <li>
+                  <strong>Ai / Vibe Coding</strong>
+                  <span>아이디어 정리와 작업 보조</span>
+                </li>
+              </ul>
             </div>
           </Link>
         </div>
