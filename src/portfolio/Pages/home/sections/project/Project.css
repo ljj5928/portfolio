@@ -393,16 +393,13 @@
     left: 100px;
     top: 200px;
   }
+  .project-gallery.leaving-up .stack-card.top {
+    left: 100px;
+  }
   .project-gallery.leaving-up .stack-card.back {
     left: 230px;
   }
 
-  .project-gallery.leaving-up .stack-card.mid {
-  }
-
-  .project-gallery.leaving-up .stack-card.top {
-    left: 100px;
-  }
 
   @media screen and (max-width: 768px) {
     .project-container {
