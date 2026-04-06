@@ -81,21 +81,14 @@ const Profile = () => {
           <div className="profile-text">
             <h3 className="profile-headline">
               <span className="reveal-line" style={{ transitionDelay: "0s" }}>
-                기본에 충실한 마크업과
+                React 기반 인터랙션 구현에 강점을 가진
               </span>
               <br />
               <span
                 className="reveal-line"
                 style={{ transitionDelay: "0.08s" }}
               >
-                깔끔한 구조를 중요하게 생각하는
-              </span>
-              <br />
-              <span
-                className="reveal-line"
-                style={{ transitionDelay: "0.16s" }}
-              >
-                Web Publisher입니다.
+               웹 퍼블리셔 이재진입니다.
               </span>
             </h3>
 
@@ -104,20 +97,20 @@ const Profile = () => {
                 className="reveal-line"
                 style={{ transitionDelay: "0.24s" }}
               >
-                작은 디테일까지 고민하며
+                반응형 구조와 자연스러운 애니메이션을 통해
               </span>
               <br />
-              <span
+              <span   
                 className="reveal-line"
                 style={{ transitionDelay: "0.32s" }}
               >
-                지속적으로 성장하고 있습니다.
+                사용자 흐름을 고려한 UI를 구현합니다.
               </span>
             </p>
           </div>
 
           <Link to="/about" className="profile-button reveal-line">
-            <span className="profile-button-text">About me</span>
+            <span className="profile-button-text">More About Me</span>
             <span className="profile-button-arrow">→</span>
           </Link>
         </div>
@@ -144,8 +137,8 @@ const Profile = () => {
 
               <ul className="skills-list">
                 <li>
-                  <strong>React / Vite</strong>
-                  <span>컴포넌트 기반 UI 제작</span>
+                  <strong>React</strong>
+                  <span>컴포넌트 구조 설계 / 상태 기반 UI 구현</span>
                 </li>
 
                 <li>

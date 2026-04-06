@@ -224,12 +224,15 @@
 .profile-skills {
   position: relative;
 
+  min-width: 320px;
+
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 24px;
 
-  padding: 36px;
+  padding: 32px;
 
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 26px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(14px);
@@ -250,30 +253,33 @@
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .skills-list li {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 14px;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .skills-list li:last-child {
+  padding-bottom: 0;
+
   border-bottom: none;
 }
 
 .skills-list strong {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .skills-list span {
   font-size: 14px;
+  line-height: 1.7;
   color: #bdbdbd;
 }
 
@@ -366,11 +372,12 @@
 
   .profile-gallery {
     flex-direction: column;
-    gap: 0px;
+    gap: 30px;
 
     position: relative;
 
     justify-content: center;
+    align-items: center;
   }
   .profile-photo {
     height: 300px;
@@ -378,12 +385,19 @@
 
   .profile-skills {
     position: relative;
-    padding: 20px 0px;
+    padding: 20px;
   }
   .skills-list {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 500px;
+    max-width: 400px;
+    column-gap: 50px;
+  }
+  .skills-list li{
+    border-bottom: none;
+  }
+  .skills-list span {
+    display: none;
   }
 }
 

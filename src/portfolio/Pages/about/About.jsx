@@ -1,6 +1,5 @@
 import React from "react";
 import Overview from "./sections/overview/Overview";
-import Strength from "./sections/strength/Strength";
 import Skill from "./sections/skill/Skill";
 import "./About.css";
 import Tools from "./sections/tool/Tools";
@@ -15,7 +14,6 @@ const About = () => {
         }}
       ></div>
       <Overview />
-      <Strength />
       <Skill />
       <Tools />
     </div>

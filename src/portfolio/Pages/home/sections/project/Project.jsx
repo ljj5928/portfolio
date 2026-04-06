@@ -104,19 +104,26 @@ const Project = () => {
           <div className="project-text">
             <h3 className="project-headline">
               <span className="reveal-line" style={{ transitionDelay: "0s" }}>
-                사용자 경험을 고려한 구조와
+                HTML, CSS, JS 기반 퍼블리싱과
               </span>
               <br />
               <span
                 className="reveal-line"
                 style={{ transitionDelay: "0.08s" }}
               >
-                정확한 마크업을 바탕으로
+                React를 활용한 상태 관리와
               </span>
               <br />
               <span
                 className="reveal-line"
                 style={{ transitionDelay: "0.16s" }}
+              >
+                API 연동을 통해
+              </span>
+              <br />
+              <span
+                className="reveal-line"
+                style={{ transitionDelay: "0.24s" }}
               >
                 프로젝트를 제작했습니다.
               </span>
@@ -127,20 +134,20 @@ const Project = () => {
                 className="reveal-line"
                 style={{ transitionDelay: "0.24s" }}
               >
-                HTML, CSS, JavaScript를 기반으로
+                반응형 구조와 시맨틱 마크업을 구현하고,
               </span>
               <br />
               <span
                 className="reveal-line"
                 style={{ transitionDelay: "0.32s" }}
               >
-                클론코딩과 React 프로젝트를 제작했습니다.
+                인터랙션 구현 경험을 쌓았습니다.
               </span>
             </p>
           </div>
 
           <Link to="/projects" className="project-button reveal-button">
-            <span className="project-button-text">My Work</span>
+            <span className="project-button-text">View Projects</span>
             <span className="project-button-arrow">→</span>
           </Link>
         </div>
@@ -164,23 +171,38 @@ const Project = () => {
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card3.png)`,
                 }}
               >
-
+                <div className="card-overlay"></div>
+                <div className="card-info">
+                  <h4>날씨 앱</h4>
+                  <p>React / Redux / API</p>
+                </div>
               </div>
+
               <div
                 className="stack-card mid"
                 style={{
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card2.png)`,
                 }}
               >
-
+                <div className="card-overlay"></div>
+                <div className="card-info">
+                  <h4>ABL Bio 클론코딩</h4>
+                  <p>HTML / CSS / JS</p>
+                </div>
               </div>
+
               <div
                 className="stack-card top"
                 style={{
                   backgroundImage: `url(${import.meta.env.BASE_URL}img/home/home-project-card1.png)`,
                 }}
               >
+                <div className="card-overlay"></div>
 
+                <div className="card-info">
+                  <h4>동원그룹 클론코딩</h4>
+                  <p>React / GSAP / Three.js</p>
+                </div>
               </div>
             </div>
           </div>
